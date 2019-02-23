@@ -1,4 +1,5 @@
 library(shinydashboard)
+library(shinyBS)
   
 dashboardPage(
   dashboardHeader(),
@@ -7,12 +8,12 @@ dashboardPage(
       selectInput("stateFilter", 
                   label = "State:",
                   choices = stateChoices,
-                  selected = 'CA'),
+                  selected = 'All'),
       
       selectInput("cityFilter",
                   label = 'City:',
                   choices = cityChoices,
-                  selected = 'LOS ANGELES'),
+                  selected = 'All'),
       
       selectInput("infectionFilter",
                   label = 'Infection:',
@@ -23,7 +24,15 @@ dashboardPage(
                   label = 'Metric:',
                   choices = metricChoices,
                   selected = 'Patient Days'),
-      sliderInput("maxResults", "Maximum results", min = SLIDER_MIN_VALUE, max = SLIDER_MAX_VALUE, value = SLIDER_INIT_VALUE))),
+      sliderInput("maxResults", "Maximum results", min = SLIDER_MIN_VALUE, max = SLIDER_MAX_VALUE, value = SLIDER_INIT_VALUE),
+      br(), br(),
+      bsButton("plot", label  = "Plot",
+               type   = "primary",
+               value  = FALSE,
+               style  = "primary",
+               size   = "default",
+               width  = "90%",
+               icon   = icon("arrow-right")))),
   dashboardBody(
     box(title  = "Compare US Hospitals regarding infections",
                  width  = 12,
@@ -37,13 +46,13 @@ dashboardPage(
         collapsible = F,
         tabsetPanel(id='main',
           tabPanel('Barplot', p(),
-            fluidRow(plotlyOutput("chart",width='100%', height = '800px'))
+            plotlyOutput("chart", width='100%', height = '800px')
           ),
           tabPanel('Map', p(),
-            fluidRow(leafletOutput("map", height = "800px"))
+            leafletOutput("map", height = "800px")
           ),
           tabPanel("Data", p(),      
-            fluidRow(dataTableOutput("dataTable"))
+            dataTableOutput("dataTable")
           )
         )
       )
