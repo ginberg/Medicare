@@ -1,13 +1,12 @@
-# Medicare
+### Application purpose
 
-### Intention of Project
+Medicare is the US government organization for medical care. They provide a lot of data about healthcare (providers), hospitals, physicians and more. I wanted to put the data in a format so that people can make a better decision on where they decide to seek healthcare.
 
-I want to put some public healthcare data in a format that allows people to make a more informed decision on where they decide to seek healthcare.  
 
-A lot of information is out there - this one happens to be based off of Medicare data. I will add more to this readme as I get more time but for now - the shinyApp folder is my main focus.  
+#### Application properties
 
-I created a sqlite database within there to improve speed and performance - I believe it's about 4 months old and could be updated.  
+* The data is retrieved from Medicare and is only about infections.
+* The data is stored in a sqlite database.
 
-I would love some help with this so please submit whatever changes you would like to see. I haven't put very much time into it yet but will be doing so in early June (2017).
 
-The application is available at https://stoltzmaniac.shinyapps.io/medicare_infections/
+This application is developed by Scott Stoltzman and [Ger Inberg](https://gerinberg.com)

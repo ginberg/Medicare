@@ -71,8 +71,3 @@ FORMAT_COLUMN_COLOR_WARN <- "salmon"
 FORMAT_COLUMN_COLOR_AVERAGE = 'lightgrey'
 FORMAT_COLUMN_COLOR_NOT_AVAILABLE = 'darkgrey'
 FORMAT_CHART_COLOR_LIST = c(FORMAT_COLUMN_COLOR, FORMAT_COLUMN_COLOR_AVERAGE, FORMAT_COLUMN_COLOR_WARN, FORMAT_COLUMN_COLOR_NOT_AVAILABLE)
-
-#a = df %>% group_by(Address,State,Measure,Metric) %>% summarise(Score = sum(Score))
-#b = a %>% spread(Metric,Score)
-#p = ggplot(b,aes(x=`Predicted Cases`,y=`Observed Cases`,col=Measure))
-#p + geom_point() + geom_abline(slope=1,intercept=0) + facet_wrap(~State)

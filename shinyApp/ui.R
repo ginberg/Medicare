@@ -1,11 +1,9 @@
-shinyUI(fluidPage(
-  titlePanel("Medicare Data"),
+shinyUI(
+  fluidPage(
+  titlePanel("Compare US Hospital scores regarding infections"),
   
   sidebarLayout(
-    
     sidebarPanel(
-      helpText("Pick One:"),
-      
       selectInput("stateFilter", 
                   label = "State:",
                   choices = stateChoices,
@@ -25,21 +23,21 @@ shinyUI(fluidPage(
                   label = 'Metric:',
                   choices = metricChoices,
                   selected = 'Patient Days'),
-      
       sliderInput("maxResults", "Maximum results", min = SLIDER_MIN_VALUE, max = SLIDER_MAX_VALUE, value = SLIDER_INIT_VALUE)
-      
     , width = 2),
-
     mainPanel(
       tabsetPanel(id='main',
-                  tabPanel('Measure per hospital plot', p(),
+                  tabPanel('Barplot', p(),
                     fluidRow(plotlyOutput("chart",width='100%', height = '800px'))
                   ),
-                  tabPanel('Measure per hospital map', p(),
+                  tabPanel('Map', p(),
                     fluidRow(leafletOutput("map", height = "800px"))
                   ),
-                  tabPanel("Measure per hospital data", p(),      
+                  tabPanel("Data", p(),      
                     fluidRow(dataTableOutput("dataTable"))
+                  ),
+                  tabPanel("Documentation", p(),      
+                           includeMarkdown("../README.md")
                   )
       )
     )
