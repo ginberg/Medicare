@@ -152,6 +152,11 @@ shinyServer(function(input, output, session){
     userSel$metric      <- input$metricFilter
     userSel$max_results <- input$maxResults
     userSel$show_data   <- TRUE
+    
+    if (is.null(input$isReadmeCollapsed) || !(input$isReadmeCollapsed)) {
+      js$collapse("readmeBox")
+    }
+    
   })
   
 })
