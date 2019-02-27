@@ -101,5 +101,3 @@ collapsedInput <- function(inputId, boxId) {
     sprintf("$('#%s').closest('.box').on('shown.bs.collapse', function () {Shiny.onInputChange('%s', false);})", boxId, inputId)
   )
 }
-
-print("loaded globale")

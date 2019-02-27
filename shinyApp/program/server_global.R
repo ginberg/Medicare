@@ -23,10 +23,6 @@
 # ----------------------------------------
 
 # -- IMPORTS --
-suppressPackageStartupMessages(library(ggplot2))
-suppressPackageStartupMessages(library(ggthemes))
-suppressPackageStartupMessages(library(GGally))
-suppressPackageStartupMessages(library(markdown))
 
 
 # -- VARIABLES --
@@ -34,6 +30,4 @@ suppressPackageStartupMessages(library(markdown))
 
 # -- FUNCTIONS --
 source('program/fxn/supporting.R')
-
-theme_set(theme_gdocs())
 
