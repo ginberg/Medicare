@@ -23,11 +23,12 @@
 
 # -- Create Elements
 body1 <-box(id     = "readmeBox",
-            title  = "README",
+            title  = tags$b("README"),
             width  = 12,
             status = "info",
             collapsible = T,
             collapsed   = F,
+            tags$link(rel = "stylesheet", type = "text/css", href = "style.css"),
             useShinyjs(), 
             extendShinyjs(text = jscode, functions = c('collapse')),
             tags$head(tags$script(HTML(btnjs))),

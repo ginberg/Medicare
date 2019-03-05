@@ -47,7 +47,7 @@ add_ui_sidebar_basic(
                   choices = cityChoices,
                   selected = 'All'),
       br(), br(),
-      bsButton("plot", label  = "Plot/Update",
+      bsButton("plotButton", label  = "Plot/Update",
                type   = "primary",
                value  = FALSE,
                style  = "primary",

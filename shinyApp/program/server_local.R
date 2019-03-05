@@ -178,7 +178,7 @@ observeEvent(c(input$stateFilter, input$cityFilter, input$infectionFilter, input
 })
 
 # plot
-observeEvent(input$plot, {
+observeEvent(input$plotButton, {
   userSel$state       <- input$stateFilter
   userSel$city        <- input$cityFilter
   userSel$infection   <- input$infectionFilter

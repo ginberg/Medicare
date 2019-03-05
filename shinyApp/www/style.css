@@ -10,3 +10,16 @@
   color: white !important;
   text-decoration: underline;
 }
+
+#plotButton, #appResetId-resetButton {
+  background-color: #008d4c;
+  border-color: #008d4c;
+}
+
+.js-irs-0 .irs-single, .js-irs-0 .irs-bar-edge, .js-irs-0 .irs-bar {
+  background: #008d4c;
+}
+
+.box.box-info, .box.box-primary  {
+  border-top-color: #008d4c;
+}

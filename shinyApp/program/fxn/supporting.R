@@ -1,6 +1,5 @@
 ## Supporting functions
 
-
 create_bar_chart <- function(df, userSel, plot_colors, margins) {
   plot_ly(df, x = ~Score, y = ~Hospital.Name, 
           type = "bar", color = ~Compared.to.National, colors = plot_colors, 
