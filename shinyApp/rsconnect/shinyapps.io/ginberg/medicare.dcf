@@ -1,0 +1,13 @@
+name: medicare
+title: medicare
+username:
+account: ginberg
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 735081
+bundleId: 1903941
+url: https://ginberg.shinyapps.io/medicare/
+when: 1551285249.9406
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: info.html|log/actions.log|log/actions.log.last|log/userid.actions.log|log/userid.actions.log.last|old/gadget.R|old/server-new.R|old/test-countries.R|old/test.R|old/tmp.R|perf
